@@ -30,4 +30,10 @@ public class SettingTab implements ITab {
     public void function(IFunction function) {
         function.function();
     }
+
+    @Override
+    public List<IFunction> getFunctionList(List<Integer> functionKeyList) {
+        return null;
+    }
+
 }

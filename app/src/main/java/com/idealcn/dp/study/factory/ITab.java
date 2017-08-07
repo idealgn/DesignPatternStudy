@@ -12,4 +12,6 @@ public interface ITab {
     void setFunctionKeyList(List<Integer> functionKeyList);
     void setFunctionKey(int functionKey);
     void function(IFunction function);
+
+    List<IFunction> getFunctionList(List<Integer> functionKeyList);
 }

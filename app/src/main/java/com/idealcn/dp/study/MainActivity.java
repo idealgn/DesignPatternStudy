@@ -26,8 +26,9 @@ public class MainActivity extends AppCompatActivity {
         mainTab.setFunctionKey(0x12);
         mainTab.setFunctionKey(0x13);
         mainTab.setFunctionKey(0x14);
-        List<IFunction> functionList = FunctionFactory.getFunction(mainTab);
-        for (IFunction function : functionList) {
+        List<IFunction> iFunctionList = mainTab.getFunctionList(functionKeyList);
+//        List<IFunction> functionList = FunctionFactory.getFunction(mainTab);
+        for (IFunction function : iFunctionList) {
             mainTab.function(function);
         }
     }

@@ -35,4 +35,17 @@ public class FunctionFactory {
         }
         return iFunctionList;
     }
+
+    public static IFunction getFunction(int key) {
+        switch (key){
+            case FunctionCommon.KEY_REMOVE:
+             return new RemoveFunction();
+            case FunctionCommon.KEY_RESIZE:
+                return new ResizeFunction();
+            case FunctionCommon.KEY_LAYOUT:
+                return new LayoutFunction();
+            default:
+                return  new DefaultFunction();
+        }
+    }
 }
