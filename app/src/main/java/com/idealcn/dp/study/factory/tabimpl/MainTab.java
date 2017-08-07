@@ -1,9 +1,11 @@
 package com.idealcn.dp.study.factory.tabimpl;
 
 import com.idealcn.dp.study.factory.CommonTools;
+import com.idealcn.dp.study.factory.FunctionFactory;
 import com.idealcn.dp.study.factory.IFunction;
 import com.idealcn.dp.study.factory.ITab;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,6 +32,18 @@ public class MainTab implements ITab {
     public void function(IFunction function) {
         function.function();
     }
+
+    @Override
+    public List<IFunction> getFunctionList(List<Integer> functionKeyList) {
+        List<IFunction> functionList = new ArrayList<>();
+        IFunction function;
+        for (int key : functionKeyList) {
+            function = FunctionFactory.getFunction(key);
+            functionList.add(function);
+        }
+        return functionList;
+    }
+
 
     public void setFunctionKeyList(List<Integer> functionKeyList) {
         this.functionKeyList = functionKeyList;
