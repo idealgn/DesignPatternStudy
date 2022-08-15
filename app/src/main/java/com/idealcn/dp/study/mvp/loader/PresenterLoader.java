@@ -1,7 +1,7 @@
 package com.idealcn.design.study.mvp.loader;
 
 import android.content.Context;
-import android.support.v4.content.Loader;
+import androidx.loader.content.Loader;
 
 import com.idealcn.design.study.mvp.base.IBasePresenter;
 import com.idealcn.design.study.mvp.factory.PresenterFactory;
